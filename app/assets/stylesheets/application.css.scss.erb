@@ -16,10 +16,10 @@
 
 @font-face {
   font-family: 'Fanwood';
-  src: url('/assets/fanwood_text-webfont.eot');
-  src: url('/assets/fanwood_text-webfont.woff') format('woff'),
-       url('/assets/fanwood_text-webfont.ttf') format('truetype'),
-       url('/assets/fanwood_text-webfont.svg') format('svg');
+  src: url('/assets/fanwood-webfont.eot');
+  src: url('/assets/fanwood-webfont.woff') format('woff'),
+       url('/assets/fanwood-webfont.ttf') format('truetype'),
+       url('/assets/fanwood-webfont.svg') format('svg');
 }
 
 body { 
@@ -39,6 +39,7 @@ p {
 
 #banner {
   width: 100%;
+  height: 45px; 
   height: 500px; 
   background-image: url(<%= asset_path 'assets/woods.jpg' %>); 
 }
@@ -66,18 +67,7 @@ main {
   float: left;
   height: 70px; 
 } 
-
-.post-title { 
-  font-family: "Helvetica"; 
-  font-weight: bold; 
-  color: #2d5e75; 
-} 
-
-.post-date { 
-  font-weight: bold; 
-  margin-bottom: 40px; 
-} 
-
+ 
 #main-title { 
   font-size: 400%; 
   color: #FFF; 
@@ -89,3 +79,8 @@ main {
   top: 50%; 
   transform: translateY(-50%); 
 }
+
+.symbol-sm {
+  font-size: 70%; 
+} 
+

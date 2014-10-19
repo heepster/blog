@@ -1,3 +1,29 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.post-title a:link, .post-title a:visited {
+  font-family: "Lucida Grande"; 
+  letter-spacing: 5px;
+  color: #2d5e75; 
+} 
+
+.post-title a:hover { 
+  background-color: transparent; 
+  text-decoration: none; 
+  color: #40897e; 
+}
+
+
+.post-date { 
+  font-family: Verdana; 
+  font-size: 45%; 
+  text-transform: uppercase; 
+  margin-top: 20px; 
+  margin-bottom: 40px; 
+  font-style: italic; 
+}
+
+.post-symbol-sm {
+  margin-top: 50px; 
+} 
