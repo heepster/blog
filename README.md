@@ -5,3 +5,4 @@ TODO
 -------
 - Navigation
 - About
+- Authentication
