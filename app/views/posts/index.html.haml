@@ -1,4 +1,5 @@
 - @posts.each do |post|
-  //%h1= post.title.upcase
+  %h1.text-center.post-title= post.title.upcase
+  %h5.text-center.post-date= @post.human_readable_created_at
   = raw post.body
 

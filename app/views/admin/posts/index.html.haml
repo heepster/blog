@@ -1,11 +1,21 @@
-%table
-  - @posts.each do |post|
-    %tr
-      %td= post.title
-      %td= link_to 'Show', post, class: 'btn btn-info'
-      %td= link_to 'Edit', edit_admin_post_path(post), class: 'btn btn-success' 
-      %td= link_to 'Destroy', admin_post_path(post), :method => :delete, :data => { :confirm => 'Are you sure?' }, class: 'btn btn-danger'
-
-%br
+%h1.text-center
+  Posts
 
 = link_to 'New Post', new_admin_post_path, class: 'btn btn-info' 
+%br
+%br
+
+%table.table.table-bordered
+  %tr
+    %th Date
+    %th Title
+    %th
+    %th
+  - @posts.each do |post|
+    %tr
+      %td= post.human_readable_created_at
+      %td= link_to post.title, post
+      %td= link_to 'Edit', edit_admin_post_path(post), class: 'btn btn-success btn-xs' 
+      %td= link_to 'Destroy', admin_post_path(post), :method => :delete, :data => { :confirm => 'Are you sure?' }, class: 'btn btn-danger btn-xs'
+
+
