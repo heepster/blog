@@ -1,9 +1,10 @@
-%h1.text-center
+.text-center.symbol-sm
+  ۺ
+
+%h1.text-center.post-title
   Posts
 
-= link_to 'New Post', new_admin_post_path, class: 'btn btn-info' 
-%br
-%br
+= link_to 'New', new_admin_post_path
 
 %table.table.table-bordered
   %tr
@@ -15,7 +16,7 @@
     %tr
       %td= post.human_readable_created_at
       %td= link_to post.title, post
-      %td= link_to 'Edit', edit_admin_post_path(post), class: 'btn btn-success btn-xs' 
-      %td= link_to 'Destroy', admin_post_path(post), :method => :delete, :data => { :confirm => 'Are you sure?' }, class: 'btn btn-danger btn-xs'
+      %td= link_to 'Edit', edit_admin_post_path(post)
+      %td= link_to 'Destroy', admin_post_path(post), :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 

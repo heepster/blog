@@ -9,4 +9,8 @@ Rails.application.routes.draw do
     resources :users
   end
 
+  get 'login'  => 'sessions#new'
+  get 'logout' => 'sessions#destroy'
+  resources :sessions
+
 end

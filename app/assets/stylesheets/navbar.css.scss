@@ -1,0 +1,26 @@
+.navbar {
+  min-height: 20px !important; 
+  line-height: 40px; 
+}
+
+.navbar-nav > li > a {
+  padding-top:5px !important; 
+  padding-bottom:5px !important;
+  line-height: inherit; 
+}
+
+.navbar-default { 
+  border: 0; 
+  line-height: inherit; 
+}
+
+.transparent-nav { 
+  background: rgba(0,0,0,0.4);
+} 
+
+.navbar-brand, .navbar-nav li a {
+  height: 20px; 
+  line-height: 40px; 
+} 
+
+
