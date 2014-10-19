@@ -1,10 +1,11 @@
-= simple_form_for([:admin, @post]) do |f|
+= simple_form_for([:admin, @post], class: 'form') do |f|
   = f.error_notification
 
   .form-inputs
-    = f.input :title
-    = f.cktext_area :body
-    = f.input :user_id
+    .form-group
+      = f.input :title, input_html: { class: 'form-control' }, label: false
+    .form-group
+      = f.cktext_area :body, input_html: { class:  'form-control' }
 
   .form-actions
-    = f.button :submit
+    = f.button :submit, class: 'btn btn-success'
