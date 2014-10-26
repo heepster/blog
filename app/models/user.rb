@@ -19,7 +19,7 @@ class User < ActiveRecord::Base
   def encrypt_password
     if self.password.present?
       self.password_salt = get_salt
-      self.password_hash = hash_secret(self.password, self.password_salt)
+      self.password_hash = self.hash_secret(self.password, self.password_salt)
     end
   end
  
