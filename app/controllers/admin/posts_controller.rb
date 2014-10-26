@@ -32,6 +32,7 @@ class Admin::PostsController < ApplicationController
     @post = Post.find(params[:id]) 
 
     respond_to do |format|
+      @post.category_ids = params['post']['categories']
       if @post.update(post_params)
         format.html { redirect_to @post, notice: 'Post was successfully updated.' }
         format.json { render :show, status: :ok, location: @post }

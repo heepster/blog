@@ -19,6 +19,7 @@ gem 'pg'
 gem 'simple_form'
 gem 'ckeditor'
 gem 'bcrypt'
+gem 'select2-rails'
 
 group :development do
   gem 'better_errors'

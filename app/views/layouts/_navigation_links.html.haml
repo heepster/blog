@@ -1,4 +1,9 @@
 %li
-  = link_to 'Posts', posts_path
-%li
   = link_to 'About', about_path
+
+- if current_user
+  %li
+    = link_to 'Posts', admin_posts_path
+  %li
+    = link_to 'Categories', admin_categories_path
+

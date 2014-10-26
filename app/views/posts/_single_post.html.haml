@@ -8,4 +8,6 @@
 %h5.text-center.post-date= post.human_readable_created_at
 = raw post.body
 
+%h5.text-center.post-categories
+  = post.category_names.map {|c| "##{c}" }.join(' ')
 
