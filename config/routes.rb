@@ -14,6 +14,8 @@ Rails.application.routes.draw do
 
   get 'admin' => 'admin/posts#index'
 
+  get 'about' => 'home#about'
+
   resources :sessions
 
 end

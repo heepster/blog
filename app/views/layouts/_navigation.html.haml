@@ -1,13 +1,20 @@
 -# navigation styled for Bootstrap 3.0
-%nav.navbar.navbar-default.navbar-fixed-top.transparent-nav
-  .navbar-header
-    %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
-      %span.sr-only Toggle navigation
-      %span.icon-bar
-      %span.icon-bar
-      %span.icon-bar
-    = link_to 'ۺ', root_path, class: 'navbar-brand'
-    .vertical-line
-  .collapse.navbar-collapse
-    %ul.nav.navbar-nav
-      = render 'layouts/navigation_links'
+%nav.navbar.navbar-default.navbar-static-top
+  .container
+    .navbar-header
+      %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.navbar-brand(href="/" style="color: #2d5e75") Heepster
+      //= link_to 'ۺ', root_path, class: 'navbar-brand'
+      .vertical-line
+    .collapse.navbar-collapse
+      %ul.nav.navbar-nav
+        = render 'layouts/navigation_links'
+      %ul.nav.navbar-nav.pull-right
+        - if current_user
+          .vertical-line
+          %li
+            = link_to 'Logout', logout_path
