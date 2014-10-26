@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
   def authenticate_user
     unless current_user
       flash[:alert] = "You have to be logged in to do that."
-      redirect_to '/'
+      redirect_to new_session_path
     end
   end
 end
