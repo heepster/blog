@@ -14,6 +14,10 @@ class User < ActiveRecord::Base
     end
   end
 
+  def hash_secret(password, salt)
+    BCrypt::Engine.hash_secret(password, salt)
+  end
+
   private
 
   def encrypt_password
@@ -25,10 +29,6 @@ class User < ActiveRecord::Base
  
   def get_salt
     BCrypt::Engine.generate_salt
-  end
-
-  def hash_secret(password, salt)
-    BCrypt::Engine.hash_secret(password, salt)
   end
 
 end
