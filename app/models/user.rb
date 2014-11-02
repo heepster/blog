@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
  
   def self.authenticate(email, password) 
     user = find_by_email(email)
-    if user and user.password_hash == self.hash_secret(password, user.password_salt)
+    if user and user.password_hash == user.hash_secret(password, user.password_salt)
       return user
     end
   end
